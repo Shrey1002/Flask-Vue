@@ -1,17 +1,112 @@
-so if you're familiar with react.js then vue won't look foreign to you furthermore if you know html css and javascript then you will grasp view js in no time this project is very similar to what we did with django and react crud application where we have created spa or single page application which was a task manager to perform the four main actions create read update and delete technically speaking we are going to render view components in the browser to create our application so a component in a view file is composed from html css and javascript all together on the same page and i will show you that later so in this project we're going to do several things first we're going to connect our front-end ui view application to flask back-end server 2 we're going to develop a restful api with flask three we're going to use view router to create trouts and finally we're going to use bootstrap for some styling and for two models that we're going to create when you click some buttons so what is view view is a progressive open source javascript framework for building ui the word progressive means it's implemented as additional markup to html basically it's a template model bound to a data model template means html and data means javascript now if javascript or the data model is updated the browser's html is also updated which means it reacts to the model updates vue.js is an example of progressive framework and view is not created by a big company such as google for angular or facebook for react so it provides all the features you will need to create modern front-end applications there are several view versions but the main versions are view 2 and view 3 and in this tutorial we will be working with view 2 and as you can see if you will type view js.org you'll find here on the top you're browsing the documentation for version 2 point accent earlier click here for version 3.x documentation so the default is version 2 and if you want to check out version 3 you can click here above and you will be redirected to version 3 page so back to view 2 if you will hover over learn and click on guide you'll get a quick introduction to vue.js what it's all about getting started so there are a few ways to install vue.js to your project but as you can read here the easiest way to try out vue.js is using the hello world example you can create an index.html file and you can copy the cdn link and you can paste it there and we can also check out the installation page so here is the cdn again you can use cli which we're going to use today alright [Music] hey what's going on everyone this is back brace in this tutorial we're going to build a simple quad router application with ujs framework for the front-end design and flask micro framework for the back-end server now the original code was written by michael hermann from test driven dot io he is the co-founder slash author of real python he is also a software engineer and educator who builds financial models writes tech articles and enjoys teaching computer science i talked to michael and he very kindly has agreed that i use his code base in this tutorial because this is what i was looking for in a flask view full stack application as a way of introducing view to all of you guys who love python and work more on the server side make sure to check his profile out his articles and blog posts are simply amazing he's a very prolific tech writer and i'm pretty sure you will learn a lot from him he has developed a lot of courses as well some of these courses like test driven development with python flask and docker authentication with flask react and docker and much more in the description section below you will find a link to his profile on testdriven.io as well as his website and his github profile this is the first view tutorial on the channel but also this is not a view crash course just wanted to make this clear so the message here you can see in double curly braces and this is very analogous to django template language or jinja in flask where you can plug in here the variables and these variables are set here below in your javascript code so any changes you will do here view will react immediately and re-render it to the dom and if you will take a look to the stack overflow survey for 2020 you will find that vue js comes ... so let's get back to the main page so continue the main page declarative rendering which is in my opinion the heart of vue.js so there it is at the core of ujs is a system that enables us to declaratively render data to the dom using straightforward template syntax so as you can see here above this is the template and this is the script in one page
-so if you're familiar with react js then vue won't look foreign to you furthermore if you know html css and javascript then you will grasp view js in no time this project is very similar to what we did with django and react crud application where we have created spa or single page application which was a task manager to perform the four main actions create read update and delete technically speaking we are going to render view components in the browser to create our application so a component in a view file is composed from html css and javascript all together on the same page and i will show you that later so in this project we're going to do several things first we're going to connect our front-end ui view application to flask back-end server 2 we're going to develop a restful api with flask three we're going to use view router to create trouts and finally we're going to use bootstrap for some styling and for two models that we're going to create when you click some buttons so what is view view is a progressive open source javascript framework for building ui the word progressive means it's implemented as additional markup to html basically it's a template model bound to a data model template means html and data means javascript now if javascript or the data model is updated the browser's html is also updated which means it reacts to the model updates vue
+# Flask-Vue.js Game Library
 
+A full-stack web application for managing a game library, built with Flask for the backend and Vue.js for the frontend. This project demonstrates how to create a Single Page Application (SPA) that performs CRUD (Create, Read, Update, Delete) operations.
 
-js is an example of progressive framework and view is not created by a big company such as google for angular or facebook for react so it provides all the features you will need to create modern front-end applications there are several view versions but the main versions are view 2 and view 3 and in this tutorial we will be working with view 2 and as you can see if you will type view js org you'll find here on the top you're browsing the documentation for version 2 point accent earlier click here for version 3
+## Features
 
+- Add new games to the library
+- View list of games
+- Delete games from the library
+- RESTful API with Flask backend
+- Responsive frontend with Vue.js
+- Vue Router for navigation
+- Bootstrap for styling and modals
 
-x documentation so the default is version 2 and if you want to check out version 3 you can click here above and you will be redirected to version 3 page so back to view 2 if you will hover over learn and click on guide you'll get a quick introduction to vue js what it's all about getting started so there are a few ways to install vue
+## Tech Stack
 
+- Backend: Flask (Python)
+- Frontend: Vue.js 2.x
+- Routing: Vue Router
+- Styling: Bootstrap
+- API: RESTful
 
-js to your project but as you can read here the easiest way to try out vue js is using the hello world example you can create an index
+## Prerequisites
 
+Before you begin, ensure you have met the following requirements:
 
-html file and you can copy the cdn link and you can paste it there and we can also check out the installation page so here is the cdn again you can use cli which we're going to use today alright [Music] hey what's going on everyone this is back brace in this tutorial we're going to build a simple quad router application with ujs framework for the front-end design and flask micro framework for the back-end server now the original code was written by michael hermann from test driven dot io he is the co-founder slash author of real python he is also a software engineer and educator who builds financial models writes tech articles and enjoys teaching computer science i talked to michael and he very kindly has agreed that i use his code base in this tutorial because this is what i was looking for in a flask view full stack application as a way of introducing view to all of you guys who love python and work more on the server side make sure to check his profile out his articles and blog posts are simply amazing he's a very prolific tech writer and i'm pretty sure you will learn a lot from him he has developed a lot of courses as well some of these courses like test driven development with python flask and docker authentication with flask react and docker and much more in the description section below you will find a link to his profile on testdriven io as well as his website and his github profile this is the first view tutorial on the channel but also this is not a view crash course just wanted to make this clear so the message here you can see in double curly braces and this is very analogous to django template language or jinja in flask where you can plug in here the variables and these variables are set here below in your javascript code so any changes you will do here view will react immediately and re-render it to the dom and if you will take a look to the stack overflow survey for 2020 you will find that vue js comes
+- Python 3.7+
+- Node.js and npm
+- Git
 
+## Installation
 
-so let's get back to the main page so continue the main page declarative rendering which is in my opinion the heart of vue js so there it is at the core of ujs is a system that enables us to declaratively render data to the dom using straightforward template syntax so as you can see here above this is the template and this is the script in one page
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/flask-vue-game-library.git
+   cd flask-vue-game-library
+   ```
+
+2. Set up the backend:
+   ```
+   cd backend
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   pip install -r requirements.txt
+   ```
+
+3. Set up the frontend:
+   ```
+   cd ../frontend
+   npm install
+   ```
+
+## Usage
+
+1. Start the Flask backend server:
+   ```
+   cd backend
+   flask run
+   ```
+
+2. In a new terminal, start the Vue.js development server:
+   ```
+   cd frontend
+   npm run serve
+   ```
+
+3. Open your web browser and navigate to `http://localhost:8080`
+
+## Project Structure
+
+```
+flask-vue-game-library/
+│
+├── backend/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── venv/
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── views/
+│   │   ├── App.vue
+│   │   ├── main.js
+│   │   └── router.js
+│   ├── package.json
+│   └── vue.config.js
+│
+└── README.md
+```
+
+## API Endpoints
+
+- `GET /games`: Retrieve all games
+- `POST /games`: Add a new game
+- `DELETE /games/<id>`: Delete a game by ID
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- Original code by Michael Herman from [TestDriven.io](https://testdriven.io/)
+- Flask: https://flask.palletsprojects.com/
+- Vue.js: https://vuejs.org/
+- Bootstrap: https://getbootstrap.com/
